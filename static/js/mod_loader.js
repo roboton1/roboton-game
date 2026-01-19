@@ -156,7 +156,7 @@ function loadSync(path) {
 let options;
 
 try {
-    options = loadSync("/static/json/mods.json");
+    options = loadSync("/roboton-game/static/json/mods.json");
 } catch (error) {
     console.error('Error:', error);
 }
