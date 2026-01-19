@@ -771,4 +771,4 @@ campaignTrail_temp.global_parameter_json = JSON.parse("[{\"model\": \"campaign_t
 campaignTrail_temp.candidate_dropout_json = JSON.parse("[{\"model\": \"campaign_trail.candidate_dropout\", \"pk\": 1, \"fields\": {\"candidate\": 36, \"affected_candidate\": 18, \"probability\": 1.0}}]");
 campaignTrail_temp.show_premium = true;
 campaignTrail_temp.premier_ab_test_version = -1;
-campaignTrail_temp.credits = "ロボトン開発チーム\n\nゲームデザイン・プログラミング:\nダン・ブライアン\nアレックス・ムーア\nジャスティン・グリフィス\nジェイコブ・マクドナルド\n\nアートワーク:\nサラ・ベネット\nエマ・ジョンソン\nマイケル・リー\nデイビッド・キム\n\n音楽・サウンドエフェクト:\nエミリー・クラーク\nライアン・スミス\nトーマス・アンダーソン\n"
+campaignTrail_temp.credits = "ロボトン"
