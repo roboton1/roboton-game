@@ -125,13 +125,13 @@ function changeFavicon(src) {
     document.head.appendChild(link);
 }
 
-changeFavicon("/static/34starcircle-2.png")
+changeFavicon("/roboton-game/static/34starcircle-2.png")
 
 
 function loadEntries() {
     $.ajax({
         type: "GET",
-        url: "../static/mods/MODLOADERFILE.html",
+        url: "/roboton-game/static/mods/MODLOADERFILE.html",
         dataType: "text",
         success: function(response) {
             $("#mod_sel_wrapper").html(response);
