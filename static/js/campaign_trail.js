@@ -32,13 +32,13 @@ let baseScenarioDict = {
 // Global Text Variables
 
 // Code 1 Text
-e.SelectText = "Please select the election you will run in:";
-e.CandidText = "Please select your candidate:";
+e.SelectText = "プレイするキャラを選択してください:";
+e.CandidText = "プレイするキャラを選択してください:";
 e.VpText = "マネージャー:";
 e.PartyText = "所属:";
-e.HomeStateText = "Home State:";
+e.HomeStateText = "出身:";
 // Ending Popups
-e.ElectionPopup = "Election night has arrived. Settle in and wait for the returns, however                 long it may take. Best of luck!";
+e.ElectionPopup = "結果発表の夜が来ました！";
 e.WinPopup = "Congratulations! You won this year's election! Click OK to view the                     rest of the returns, or skip straight to the final results. We hope                     you have a nice victory speech prepared for your supporters.";
 e.LosePopup = "Sorry. You have lost the election this time. Click OK to view the                     rest of the returns, or skip straight to the final results. We hope                     you have a nice concession speech prepared.";
 
@@ -1735,8 +1735,8 @@ function divideElectoralVotesProp(e, t) {
             <form name="game_type_selection">            
             <p><h3>Select your game mode.</h3>            
             <select name="game_type_id" id="game_type_id">                
-            <option value=1>Default (Winner-Take-All)</option>                
-            <option value=2>Proportional</option>
+            <option value=1>勝者が全て獲得</option>                
+            <option value=2>敗者も票を獲得</option>
             ${shining}
             </select>            
             </p>            

@@ -60,18 +60,14 @@ if (year == "2025") {
                     lostmarginmessage = "It just seems that America didn't think your first term was impactful enough. The sluggish economy, as well as your promises not meeting your ambitious 2008 rhetoric likely led to this. The swing compare to 2008 is staggering, and just goes to show how unpopular you are. The Senate has gone red as well. Let’s hope Romney's business experience can guide America to a prosperous economy.";
                 }
             } else {
-                titlemessage = "Congratulations! you've won the 2012 election"
-                extramessagemargin = "It seems Obamacare will survive, as your veto power will stop any attempts at that. you'll also be given another chance to bring recovery to the economy after the Bush recession. If all goes well, you can leave a stronger country for Hillary Clinton in 2016 to take the reins of."
+                titlemessage = "おめでとうございます、新たな生徒会長になったよ！"
+                extramessagemargin = "あなたの力のおかげで、学校はロボトン派の支配下に入りました。ロボトンおじいちゃんもきっと喜んでいることでしょう。さあ、新しい生徒会長として、学校をより良い場所にしてください！<br><br><h1>2年後...</h1><br>うわぁ、あなたはロボトン派から追放されました、実は黒幕がいるらしい、タケシ派の陰謀です。ここで、あなたは「2027:生徒会の危機」に行ってください。"
                 if (playerEV > 365) 
                 {
-                    lostmarginmessage="Congratulations! You've successfully fought off a challenge from Mitt Romney and the Republicans, to become the third president in a row to win re-election. Mitt Romney calls to congratulate you on your victory, and the Democrats made some gains in both chambers as well, taking back the house. Many are surprised at the fact that you outdid your 2008 margins."
+                    lostmarginmessage="あなたの力のおかげで、学校はロボトン派の支配下に入りました。ロボトンおじいちゃんもきっと喜んでいることでしょう。さあ、新しい生徒会長として、学校をより良い場所にしてください！<br><br><h1>2年後...</h1><br>うわぁ、あなたはロボトン派から追放されました、実は黒幕がいるらしい、タケシ派の陰謀です。ここで、あなたは「2027:生徒会の危機」に行ってください。"
                 }
-                else if (playerEV >= 347) {
-                    lostmarginmessage = "Congratulations! You've successfully fought off a challenge from Mitt Romney and the Republicans, to become the third president in a row to win re-election. Mitt Romney calls to congratulate you on your victory, and the Democrats made some gains in both chambers as well, with the house being just shy of being controlled by them. Your optimistic rhetoric from 2008 wasn't here this time, but Democrats are still satisfied with your electoral vote margin."
-                } else if (playerEV >= 332) {
-                    lostmarginmessage = "Congratulations! You've successfully fought off a challenge from Mitt Romney and the Republicans, to become the third president in a row to win re-election. Mitt Romney calls to congratulate you on your victory, and the Democrats made some gains in either chamber as well, but you will ultimately have to bargain a lot with Republicans to pass legislation. You didn't do as well as 2008, being the first person since FDR to be re-elected with fewer electoral votes."
-                } else {
-                    lostmarginmessage = "Congratulations! You've successfully fought off a challenge from Mitt Romney and the Republicans, to become the third president in a row to win re-election. Mitt Romney calls to congratulate you on your victory. and the Democrats made some meager gains in either the house as well, but Senate losses will bring you down a notch, and force you to be even more bipartisan than before. Lets hope " + campaignTrail_temp.running_mate_last_name + " is ready to break some Senate ties. You didn't do as well as 2008, being the first person since FDR to be re-elected with fewer electoral votes."
+                else {
+                    lostmarginmessage="あなたの力のおかげで、学校はロボトン派の支配下に入りました。ロボトンおじいちゃんもきっと喜んでいることでしょう。さあ、新しい生徒会長として、学校をより良い場所にしてください！<br><br><h1>2年後...</h1><br>うわぁ、あなたはロボトン派から追放されました、実は黒幕がいるらしい、タケシ派の陰謀です。ここで、あなたは「2027:生徒会の危機」に行ってください。"
                 }
                 if (popwon == false) {
                     popvotemessage = " To the surprise of many, you became the first Democrat to lose the popular vote while winning the electoral vote! Republicans are seething, trying to cope with the fact that they were so close to victory."
@@ -80,30 +76,30 @@ if (year == "2025") {
             }
         } else {
             if (playerlost == true) {
-                titlemessage = "Sorry, you've lost the 2012 election"
-                extramessagemargin = "Many in the conservative wing of the Republican party weren't too keen on you being the nominee, so it's unlikely you'll get nominated again. You still do have a future in politics, so perhaps you could join the Senate or run for governor again, as New England is showing an increasing willingness to elect moderate Republicans on the gubernatorial scale. You might be able to carve out a strong base of support, based on one of your political or personal aspects, to win in either of these positions. "
+                titlemessage = "ごめん、あなたは負けたよ"
+                extramessagemargin = "タケシ派の団結力やロボトン派の混乱により、ロボトンおじいちゃんは怒った、何も得られなかった。"
                 if (playerEV >= 232) {
-                    lostmarginmessage = "It seems Obama will have another four years to recover the economy, as well as deal with the middle east. Republicans are despondent that you didn't defeat him, as they felt he was a very exploitable incumbent. Fortunately, you did much better than McCain, and it wasn't another landslide loss.";
+                    lostmarginmessage = "タケシ派の団結力やロボトン派の混乱により、ロボトンおじいちゃんは怒った、何も得られなかった。"
                 } else if (playerEV >= 218) {
-                    lostmarginmessage = "It seems Obama will have another four years to recover the economy, as well as deal with the middle east. Republicans are despondent that you didn't defeat him, as they felt he was a very exploitable incumbent. Fortunately, you did better than McCain, although that might have just been the stagnant economy that caused that.";
+                    lostmarginmessage = "タケシ派の団結力やロボトン派の混乱により、ロボトンおじいちゃんは怒った、何も得られなかった。"
                 } else {
-                    lostmarginmessage = "It seems Obama will have another four years to recover the economy, as well as deal with the middle east. Republicans are despondent that you didn't defeat him, as they felt he was a very exploitable incumbent. Another crushing defeat was not what the Republicans needed, but at least they are keeping their house majority.";
+                    lostmarginmessage = "タケシ派の団結力やロボトン派の混乱により、ロボトンおじいちゃんは怒った、何も得られなかった。"
                 }
                 if (popwon == false) {
                     popvotemessage = " To the shock of many, Obama loses the popular vote while winning the electoral vote. Your Republican colleagues aren't too happy, believing a more geographically oriented pick for the presidency instead of your could have won it for them"
                 }
             } else {
-                titlemessage = "Congratulations! you've won the 2012 election"
-                extramessagemargin = "Romneycare will most likely be replacing Obamacare (although they aren't all too different), as well as the Bush tax cuts will be extended to help the economy grow. If you're able to recover it and don't make any major mistakes, you should be able to win re-election in 2016. Get ready to move into the White House!."
-                if (playerEV >= 330) {
-                    lostmarginmessage = "Congratulations! Despite a well-fought battle from Barack Obama, you've become the first Mormon president and prevented the 3rd re-election in a row. Your margin of victory is remarkable, a complete flip of 2008. It seems the US population was ready for change again. The Senate flips a few seats in favour of the Republicans, too."
-                } else if (playerEV >= 308) {
-                    lostmarginmessage = "Congratulations! Despite a well-fought battle from Barack Obama, you've become the first Mormon president and prevented the 3rd re-election in a row. With a respectable win, you will net a few Senate seats, but so few coming your way will likely mean " + campaignTrail_temp.running_mate_last_name + " will be breaking a few ties. Let’s hope your bipartisanship and moderate views help decisions be made quickly and effectively."
-                } else {
-                    lostmarginmessage = "Congratulations! Despite a well-fought battle from Barack Obama, you've become the first Mormon president and prevented the 3rd re-election in a row. it was close, though. Your slim margins will keep the Senate in Democrat’s hands, so be prepared to make concessions to your propositions"
+                titlemessage = "おめでとうございます、新たな生徒会長になったよ！"
+                extramessagemargin = "あなたの力のおかげで、学校はロボトン派の支配下に入りました。ロボトンおじいちゃんもきっと喜んでいることでしょう。さあ、新しい生徒会長として、学校をより良い場所にしてください！<br><br><h1>2年後...</h1><br>うわぁ、あなたはロボトン派から追放されました、実は黒幕がいるらしい、タケシ派の陰謀です。ここで、あなたは「2027:生徒会の危機」に行ってください。"
+                if (playerEV > 365) 
+                {
+                    lostmarginmessage="あなたの力のおかげで、学校はロボトン派の支配下に入りました。ロボトンおじいちゃんもきっと喜んでいることでしょう。さあ、新しい生徒会長として、学校をより良い場所にしてください！<br><br><h1>2年後...</h1><br>うわぁ、あなたはロボトン派から追放されました、実は黒幕がいるらしい、タケシ派の陰謀です。ここで、あなたは「2027:生徒会の危機」に行ってください。"
+                }
+                else {
+                    lostmarginmessage="あなたの力のおかげで、学校はロボトン派の支配下に入りました。ロボトンおじいちゃんもきっと喜んでいることでしょう。さあ、新しい生徒会長として、学校をより良い場所にしてください！<br><br><h1>2年後...</h1><br>うわぁ、あなたはロボトン派から追放されました、実は黒幕がいるらしい、タケシ派の陰謀です。ここで、あなたは「2027:生徒会の危機」に行ってください。"
                 }
                 if (popwon == false) {
-                    popvotemessage = "To the chagrin of Democrats, creating flashbacks to 2000, the popular vote is won by the Democrats, despite your electoral vote win. be prepared for a galvanized liberal base during the mid-terms."
+                    popvotemessage = " To the surprise of many, you became the first Democrat to lose the popular vote while winning the electoral vote! Republicans are seething, trying to cope with the fact that they were so close to victory."
                 }
             }
         }
