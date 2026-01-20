@@ -1420,8 +1420,8 @@ function divideElectoralVotesProp(e, t) {
             </div>
         </div>
         <p>
-            <button id="answer_select_button" class="answer_select_button">CONTINUE</button>
-            <button id="view_electoral_map">Latest Polls/Electoral Map</button>
+            <button id="answer_select_button" class="answer_select_button">続ける</button>
+            <button id="view_electoral_map">現在のマップ</button>
             ${shining_button}
         </p>
         `;
@@ -1760,7 +1760,7 @@ function divideElectoralVotesProp(e, t) {
             </form>            </div>            
             <div class="description_window_small"                 id="opponent_selection_description_window">            </div>            
             <div id="difficulty_level">            <form name="difficulty_level_selection">            <p><h3>Please choose your difficulty level:</h3>            
-            <select name="difficulty_level_id" id="difficulty_level_id"> ${difficultyStr} </select>            </p>            </form>            </div>        <p id="opponent_selection_id_button_p"><button class="person_button" id="opponent_selection_id_back">Back</button> <button class="person_button" id="opponent_selection_id_button">Continue</button>        </p>        </div>`;
+            <select name="difficulty_level_id" id="difficulty_level_id"> ${difficultyStr} </select>            </p>            </form>            </div>        <p id="opponent_selection_id_button_p"><button class="person_button" id="opponent_selection_id_back">Back</button> <button class="person_button" id="opponent_selection_id_button">続ける</button>        </p>        </div>`;
         $("#game_window").html(d), $("#game_type_id").ready(function() {
             a($("select[name=game_type_id]").val())
 
@@ -3748,7 +3748,7 @@ _ = '   <div class="game_header"> ' + corrr + ' </div> <div id="main_content_are
                             }
                         n += "<option value=" + e.candidate_json[_].pk + ">" + e.candidate_json[_].fields.first_name + " " + e.candidate_json[_].fields.last_name + "</option>"
                     }
-                let r = '        <div class="game_header">        ' + corrr + '        </div>        <div class="inner_window_w_desc" id="inner_window_4">            <div id="running_mate_form">            <form name="running mate">            <p><h3>' + e.VpText + '</h3>            <select name="running_mate_id" id="running_mate_id">' + n + '</select>            </p>            </form>            </div>            <div class="person_description_window" id="running_mate_description_window">            </div>        <p><button class="person_button" id="running_mate_id_back">Back</button> <button class="person_button" id="running_mate_id_button">Continue</button>        </p>        </div>';
+                let r = '        <div class="game_header">        ' + corrr + '        </div>        <div class="inner_window_w_desc" id="inner_window_4">            <div id="running_mate_form">            <form name="running mate">            <p><h3>' + e.VpText + '</h3>            <select name="running_mate_id" id="running_mate_id">' + n + '</select>            </p>            </form>            </div>            <div class="person_description_window" id="running_mate_description_window">            </div>        <p><button class="person_button" id="running_mate_id_back">Back</button> <button class="person_button" id="running_mate_id_button">続ける</button>        </p>        </div>';
                 $("#game_window").html(r), $("#running_mate_id").ready(function() {
                         i()
                     }), $("#running_mate_id").change(function() {
@@ -3767,7 +3767,7 @@ _ = '   <div class="game_header"> ' + corrr + ' </div> <div id="main_content_are
                     e.shining = e.shining_info.map(f=>f.pk).includes(a);
 
                 for (var n = "", l = 0; l < e.candidate_json.length; l++) e.candidate_json[l].fields.election == a && 1 == e.candidate_json[l].fields.is_active && (n += "<option value=" + e.candidate_json[l].pk + ">" + e.candidate_json[l].fields.first_name + " " + e.candidate_json[l].fields.last_name + "</option>");
-                let o = '<div class="game_header">        ' + corrr + '    </div>    <div class="inner_window_w_desc" id="inner_window_3">        <div id="candidate_form">        <form name="candidate">            <p>            <h3>' + e.CandidText + '</h3>            <select name="candidate_id" id="candidate_id">' + n + '</select>            </p>        </form>        </div>        <div class="person_description_window" id="candidate_description_window">        </div>        <p><button class="person_button" id="candidate_id_back">Back</button> <button class="person_button" id="candidate_id_button">Continue</button>        </p>    </div>';
+                let o = '<div class="game_header">        ' + corrr + '    </div>    <div class="inner_window_w_desc" id="inner_window_3">        <div id="candidate_form">        <form name="candidate">            <p>            <h3>' + e.CandidText + '</h3>            <select name="candidate_id" id="candidate_id">' + n + '</select>            </p>        </form>        </div>        <div class="person_description_window" id="candidate_description_window">        </div>        <p><button class="person_button" id="candidate_id_back">Back</button> <button class="person_button" id="candidate_id_button">続ける</button>        </p>    </div>';
                 $("#game_window").html(o), $("#candidate_id").ready(function() {
                         t()
                     }), $("#candidate_id").change(function() {
@@ -3783,7 +3783,7 @@ _ = '   <div class="game_header"> ' + corrr + ' </div> <div id="main_content_are
                 for (var a = "", n = 0; n < e.temp_election_list.length; n++) 0 == e.temp_election_list[n].is_premium ? a += "<option value=" + e.temp_election_list[n].id + ">" + e.temp_election_list[n].display_year + "</option>" : 1 == e.show_premium ? a += "<option value=" + e.temp_election_list[n].id + ">" + e.temp_election_list[n].display_year + "</option>" : a += "<option value=" + e.temp_election_list[n].id + " disabled>" + e.temp_election_list[n].display_year + "</option>";
                 e.election_id = e.election_id ? e.election_id : e.election_json[0].pk
                 let inX = S(e.election_id)
-                var l = '<div class="game_header">            ' + corrr + '        </div>        <div class="inner_window_w_desc" id="inner_window_2">            <div id="election_year_form">            <form name="election_year">            <p>                <h3>' + e.SelectText + '</h3>    \t\t    <select name="election_id" id="election_id">' + a + '</select>            </p>            </form>            <div class="election_description_window" id="election_description_window">                <div id="election_image">                    <img src="' + e.election_json[inX].fields.image_url + '" width="300" height="160"/>                </div>                <div id="election_summary">' + e.election_json[inX].fields.summary + '</div>            </div>        </div>        <p><button id="election_id_button">Continue</button></p> <p id="credits">This scenario was made by ' + e.credits + '.</p>';
+                var l = '<div class="game_header">            ' + corrr + '        </div>        <div class="inner_window_w_desc" id="inner_window_2">            <div id="election_year_form">            <form name="election_year">            <p>                <h3>' + e.SelectText + '</h3>    \t\t    <select name="election_id" id="election_id">' + a + '</select>            </p>            </form>            <div class="election_description_window" id="election_description_window">                <div id="election_image">                    <img src="' + e.election_json[inX].fields.image_url + '" width="300" height="160"/>                </div>                <div id="election_summary">' + e.election_json[inX].fields.summary + '</div>            </div>        </div>        <p><button id="election_id_button">続ける</button></p> <p id="credits">This scenario was made by ' + e.credits + '.</p>';
                 $("#game_window").html(l)
                 $("#election_id")[0].value=e.election_id
                 $("#election_id").change(function() {
