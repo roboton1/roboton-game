@@ -6015,6 +6015,16 @@
                 "affected_candidate": 18,
                 "global_multiplier": 2
             }
+        },
+        {
+            "model": "campaign_trail.answer_score_global",
+            "pk": 1330,
+            "fields": {
+                "answer": 1259,
+                "candidate": 18,
+                "affected_candidate": 18,
+                "global_multiplier": 16
+            }
         }
     ]
 
@@ -6192,6 +6202,8 @@
     campaignTrail_temp.jet_data = [{}
     ]
 
+
+
     campaignTrail_temp.cyoa = true
     cyoAdventure = function (a) {
         ans = campaignTrail_temp.player_answers[campaignTrail_temp.player_answers.length - 1]
@@ -6324,7 +6336,7 @@
 
         let headerText = document.createElement('h3');
         headerText.innerHTML = '生徒会長選挙活動';
-        headerText.style.color = 'white';
+        headerText.style.color = 'red';
         headerText.style.textAlign = 'center';  // Center the text
         headerText.style.flexGrow = '1';  // Make h3 take up the maximum space available
         headerDiv.appendChild(headerText);

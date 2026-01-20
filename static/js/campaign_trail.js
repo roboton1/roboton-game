@@ -26,7 +26,8 @@ let baseScenarioDict = {
     "2016":"2016_Clinton_Booker.html",
     "2016a":"2016a_Clinton_Booker.html",
     "2020":"2020_Biden_Bass.html",
-    "2025":"2025_Roboton_a.html"
+    "2025":"2025_Roboton_a.html",
+    "2027":"2027_2nd_a.html"
 }
 
 // Global Text Variables

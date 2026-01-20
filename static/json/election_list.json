@@ -4,5 +4,11 @@
     "year": 2025,
     "is_premium": 0,
     "display_year": "2025:ロボトン生徒会長選挙"
+  },
+  {
+    "id": 2,
+    "year": 2027,
+    "is_premium": 0,
+    "display_year": "2027:ロボトン生徒会長選挙"
   }
 ]
