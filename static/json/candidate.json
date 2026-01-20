@@ -91,8 +91,8 @@
     "model": "campaign_trail.candidate",
     "pk": 19,
     "fields": {
-      "first_name": "Jill",
-      "last_name": "Stein",
+      "first_name": "山田",
+      "last_name": "Yamada",
       "election": 1,
       "party": "Green",
       "state": "Massachusetts",
