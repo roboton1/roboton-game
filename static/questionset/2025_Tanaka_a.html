@@ -6207,6 +6207,9 @@
         if (ans == 1323) {
             campaignTrail_temp.question_number = 24
         }
+        if (ans == 1270) {
+            campaignTrail_temp.question_number = 24
+        }
         if (ans == 1278) {
             radical += 3
             strat = '票妨害とデマで相手を潰す'
@@ -6275,8 +6278,9 @@
         }
 
         let questions = document.querySelector(".inner_window_question");
-
-        questions.style.display = 'none';
+        if (questions) {
+            questions.style.display = 'none';
+        }
 
         const hqButton = document.getElementById('headquarter_button');
         if (hqButton) {
