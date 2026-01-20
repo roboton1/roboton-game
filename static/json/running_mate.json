@@ -105,6 +105,14 @@
   },
   {
     "model": "campaign_trail.running_mate",
+    "pk": 2,
+    "fields": {
+      "candidate": 1373,
+      "running_mate": 20271
+    }
+  },
+  {
+    "model": "campaign_trail.running_mate",
     "pk": 160,
     "fields": {
       "candidate": 202,

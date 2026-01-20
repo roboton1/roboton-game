@@ -12,6 +12,7 @@ e=campaignTrail_temp
 e.shining_data = {}
 
 let baseScenarioDict = {
+    "yofkorea":"2022 - Y of Korea.html",
     "1844":"1844_Clay_Fillmore.html",
     "1860":"1860_Douglas_Guthrie.html",
     "1896":"1896_Bryan_Boies.html",
@@ -3455,7 +3456,7 @@ _ = '   <div class="game_header"> ' + corrr + ' </div> <div id="main_content_are
 
     function y() {
         var t = S(e.election_id);
-        $("#game_window").append('        <div class="overlay" id="new_game_overlay"></div>        <div class="overlay_window" id="new_game_window">            <div class="overlay_window_content" id="election_night_content">            <h3>Advisor Feedback</h3>            <img src="' + e.election_json[t].fields.advisor_url + '" width="208" height="128"/><p>            Are you sure you want to begin a new game?            </p></div>            <div class="overlay_buttons" id="new_game_buttons">            <button id="new_game_button">Yes</button><br>            <button id="cancel_button">No</button>            </div>        </div>'), $("#new_game_button").click(function() {
+        $("#game_window").append('        <div class="overlay" id="new_game_overlay"></div>        <div class="overlay_window" id="new_game_window">            <div class="overlay_window_content" id="election_night_content">            <h3>Advisor Feedback</h3>            <img src="' + e.election_json[t].fields.advisor_url + '" width="208" height="128"/><p>             再びプレイしますか？            </p></div>            <div class="overlay_buttons" id="new_game_buttons">            <button id="new_game_button">Yes</button><br>            <button id="cancel_button">No</button>            </div>        </div>'), $("#new_game_button").click(function() {
             if (modded) {
                 let hotload = e.hotload ? e.hotload : $("#modSelect")[0].value;
                 if (hotload != "other") {
@@ -3595,6 +3596,10 @@ _ = '   <div class="game_header"> ' + corrr + ' </div> <div id="main_content_are
                 }
                 for (d = 0; d < f[r].state_multipliers.length; d++)
                     if (f[r].state_multipliers[d].state == f[0].state_multipliers[a].state) var C = d;
+                if (!f[r].state_multipliers[C]) {
+                    console.error("Missing multiplier:", r, C, f[r].state_multipliers);
+                }
+
                 $ *= f[r].state_multipliers[C].state_multiplier, $ = Math.max($, 0), k.push({
                     candidate: i[r],
                     result: $

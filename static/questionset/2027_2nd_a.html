@@ -1,0 +1,164 @@
+<div class="game_header">
+    <h2>NEW CAMPAIGN TRAIL</h2>
+</div>
+<div class="inner_window_question">
+    <div class="inner_inner_window">
+        <h3>In the most general terms, what will be your overall campaign strategy against Romney?</h3>
+        <div id="question_form">
+            <form name="question"><input type="radio" name="game_answers" class="game_answers" id="game_answers[0]"
+                    value="727" /> <label for="game_answers[0]">Behind the scenes my surrogates have plenty of dirt to
+                    spread about Romney and the Republicans. As President, I will stick to a message of optimism and
+                    hope in my own campaign speeches.</label><br><input type="radio" name="game_answers"
+                    class="game_answers" id="game_answers[1]" value="729" /> <label for="game_answers[1]">I will pledge
+                    a new commitment to liberalism and economic revival. Our social programs and unions need to be
+                    protected. In those areas where Republicans continue to stand in the way of progress, we will look
+                    for other ways to get things done.</label><br><input type="radio" name="game_answers"
+                    class="game_answers" id="game_answers[2]" value="726" /> <label for="game_answers[2]">We will attack
+                    Mitt Romney relentlessly. He has flip-flopped on key issues and he destroyed thousands of jobs at
+                    Bain Capital. He is out of touch with the American people, and he's attacking us for a health care
+                    plan that is nearly identical to his own plan in Massachusetts.</label><br><input type="radio"
+                    name="game_answers" class="game_answers" id="game_answers[3]" value="728" /> <label
+                    for="game_answers[3]">I will promise a fresh start in overcoming the gridlock in Washington. In my
+                    second term I will reach out to moderates and sensible Republicans to find common, pragmatic
+                    solutions to our most pressing issues.</label><br></form>
+        </div>
+    </div>
+    <p><button id="answer_select_button" class="answer_select_button">CONTINUE</button> <button
+            id="view_electoral_map">Latest Polls/Electoral Map</button></p>
+</div> <img id="candidate_pic" src="../static/images/barack-obama-2012.jpg"> <img id="running_mate_pic"
+    src="../static/images/hillary-clinton-2012.jpg">
+<div class="inner_window_sign_display">
+    <div id="progress_bar">
+        <h3>Question 1 of 25</h3>
+    </div>
+    <div id="campaign_sign">
+        <p>ロボトン</p>
+        <p>生徒会長候補</p>
+    </div>
+</div>
+
+
+<script>
+    for (i in campaignTrail_temp.election_json) {
+        if (campaignTrail_temp.election_json[i].pk == campaignTrail_temp.election_id) {
+            year = campaignTrail_temp.temp_election_list[i].display_year
+        }
+    }
+    if (year == "2025") {
+        campaignTrail_temp.multiple_endings = true;
+
+        function endingPicker(out, totv, aa, quickstats) {
+
+            //Obama ID=16, Romney ID=17
+            orderID = [aa[0].candidate, aa[1].candidate];
+            playerlost = true;
+            playerID = campaignTrail_temp.candidate_id;
+            playerEV = quickstats[0];
+            popvotemessage = "";
+            lostmarginmessage = "";
+            extramessagemargin = "";
+            titlemessage = "";
+            popwon = true;
+
+            if (aa[0].electoral_votes < 270) {
+                return false;
+            }
+            if (aa[1].popular_votes > aa[0].popular_votes) {
+                popwon = false;
+            }
+            if (playerEV == aa[0].electoral_votes) {
+                playerID = orderID[0];
+            } else {
+                playerID = orderID[1];
+            }
+            if (playerEV >= 270) {
+                playerlost = false
+            }
+            if (playerID == 16 && playerEV == 538) {
+                return "<h3>“Perfect”</h3><p>Those were the words of Barack Obama, as he watches a large flatscreen television across the room from him. The audio output from it relays the projection of the state of Utah in favour of him, completing his 538 vote nationwide sweep of the presidential election. He chuckles to himself. His master plan of tricking the US public into thinking he was an earnest man, that hoped everyone would succeed. He'd played them like fiddles. With his new house and senate supermajorities, he could instate his master plan. First, he would pass a bill that knocks down every Christian church in America and use the rubble to build monuments to Allah. Next, he was going to raise taxes to 101% percent on billionaires, and use the money to buy every school and start teaching communist history. Finally, he would amend the constitution, and remove every odd-numbered amendment, making the American population bend to his every whim (probably, he hadn't thought that far yet). He wonders how anyone could have possibly missed such an obvious plan. It seems only a few people on the internet realized it, but thankfully nobody took them seriously...  <p><p>"
+            }
+            if (playerID == 17 && playerEV == 538) {
+                return "<h3>“Breaking New: RomneyMania sweeps America”</h3><p>From coast to coast and town to town in nearly every public meeting space and private residence, millions of Americans have been captivated, inspired, and in some cases even moved to tears by Republican presidential candidate Mitt Romney, all signs that the nation has undeniably been swept up in full-scale Romneymania. The raw energy and enthusiasm of Romney coupled with his uplifting story of rising from moderate wealth to overwhelming riches are just some of the reasons reverent portraits of the former Massachusetts governor have started appearing in windows across the country, often accompanied by one of Romney's signature inspirational phrases, such as 'let Detroit go bankrupt’, or 'Corporations are people.'"
+            }
+            if (playerID == 16) {
+                if (playerlost == true) {
+                    titlemessage = "Sorry, you’ve lost the 2012 election"
+                    if (popwon == false) {
+                        extramessagemargin = "Your political career very well might be still alive. Your popular vote victory in this election signals that the people still like you, so perhaps another run in 4 years is in the cards? Maybe you'll be Grover Cleveland 2.0 ..."
+                    } else {
+                        extramessagemargin = "Your political career is most likely over, despite your relative youth, due to the harsh reality of what happens to one-term presidents in this day. Speaking tours and book deals await your future. Perhaps you can be the next Jimmy Carter?"
+                    }
+                    if (playerEV >= 260) {
+                        lostmarginmessage = "It just seems that America didn't think your first term was impactful enough. The sluggish economy, as well as your promises not meeting your ambitious 2008 rhetoric likely led to this. You still did do a lot, and it's clear that many Americans thought you deserved a second chance with the margin of victory. Let’s hope Romney's business experience can guide America to a prosperous economy.";
+                    } else if (playerEV >= 238) {
+                        lostmarginmessage = "It just seems that America didn't think your first term was impactful enough. The sluggish economy, as well as your promises not meeting your ambitious 2008 rhetoric likely led to this. Democrats are despondent that after 8 years of George Bush, you weren't able to revitalize the country in time. The house has also stayed Republican and the senate is eerily close to being in their hands as well. Paul Ryan might be casting a lot of tie-breaking votes. Let’s hope Romney's business experience can guide America to a prosperous economy.";
+                    } else {
+                        lostmarginmessage = "It just seems that America didn't think your first term was impactful enough. The sluggish economy, as well as your promises not meeting your ambitious 2008 rhetoric likely led to this. The swing compare to 2008 is staggering, and just goes to show how unpopular you are. The Senate has gone red as well. Let’s hope Romney's business experience can guide America to a prosperous economy.";
+                    }
+                } else {
+                    titlemessage = "おめでとうございます、新たな生徒会長になったよ！"
+                    extramessagemargin = "あなたの力のおかげで、学校はロボトン派の支配下に入りました。ロボトンおじいちゃんもきっと喜んでいることでしょう。さあ、新しい生徒会長として、学校をより良い場所にしてください！<br><br><h1>2年後...</h1><br>うわぁ、あなたはロボトン派から追放されました、実は黒幕がいるらしい、タケシ派の陰謀です。ここで、あなたは「2027:生徒会の危機」に行ってください。"
+                    if (playerEV > 365) {
+                        lostmarginmessage = "あなたの力のおかげで、学校はロボトン派の支配下に入りました。ロボトンおじいちゃんもきっと喜んでいることでしょう。さあ、新しい生徒会長として、学校をより良い場所にしてください！<br><br><h1>2年後...</h1><br>うわぁ、あなたはロボトン派から追放されました、実は黒幕がいるらしい、タケシ派の陰謀です。ここで、あなたは「2027:生徒会の危機」に行ってください。"
+                    }
+                    else {
+                        lostmarginmessage = "あなたの力のおかげで、学校はロボトン派の支配下に入りました。ロボトンおじいちゃんもきっと喜んでいることでしょう。さあ、新しい生徒会長として、学校をより良い場所にしてください！<br><br><h1>2年後...</h1><br>うわぁ、あなたはロボトン派から追放されました、実は黒幕がいるらしい、タケシ派の陰謀です。ここで、あなたは「2027:生徒会の危機」に行ってください。"
+                    }
+                    if (popwon == false) {
+                        popvotemessage = " To the surprise of many, you became the first Democrat to lose the popular vote while winning the electoral vote! Republicans are seething, trying to cope with the fact that they were so close to victory."
+                    }
+
+                }
+            } else {
+                if (playerlost == true) {
+                    titlemessage = "ごめん、あなたは負けたよ"
+                    extramessagemargin = "タケシ派の団結力やロボトン派の混乱により、ロボトンおじいちゃんは怒った、何も得られなかった。"
+                    if (playerEV >= 232) {
+                        lostmarginmessage = "タケシ派の団結力やロボトン派の混乱により、ロボトンおじいちゃんは怒った、何も得られなかった。"
+                    } else if (playerEV >= 218) {
+                        lostmarginmessage = "タケシ派の団結力やロボトン派の混乱により、ロボトンおじいちゃんは怒った、何も得られなかった。"
+                    } else {
+                        lostmarginmessage = "タケシ派の団結力やロボトン派の混乱により、ロボトンおじいちゃんは怒った、何も得られなかった。"
+                    }
+                    if (popwon == false) {
+                        popvotemessage = " To the shock of many, Obama loses the popular vote while winning the electoral vote. Your Republican colleagues aren't too happy, believing a more geographically oriented pick for the presidency instead of your could have won it for them"
+                    }
+                } else {
+                    titlemessage = "おめでとうございます、新たな生徒会長になったよ！"
+                    extramessagemargin = "あなたの力のおかげで、学校はロボトン派の支配下に入りました。ロボトンおじいちゃんもきっと喜んでいることでしょう。さあ、新しい生徒会長として、学校をより良い場所にしてください！<br><br><h1>2年後...</h1><br>うわぁ、あなたはロボトン派から追放されました、実は黒幕がいるらしい、タケシ派の陰謀です。ここで、あなたは「2027:生徒会の危機」に行ってください。"
+                    if (playerEV > 365) {
+                        lostmarginmessage = "あなたの力のおかげで、学校はロボトン派の支配下に入りました。ロボトンおじいちゃんもきっと喜んでいることでしょう。さあ、新しい生徒会長として、学校をより良い場所にしてください！<br><br><h1>2年後...</h1><br>うわぁ、あなたはロボトン派から追放されました、実は黒幕がいるらしい、タケシ派の陰謀です。ここで、あなたは「2027:生徒会の危機」に行ってください。"
+                    }
+                    else {
+                        lostmarginmessage = "あなたの力のおかげで、学校はロボトン派の支配下に入りました。ロボトンおじいちゃんもきっと喜んでいることでしょう。さあ、新しい生徒会長として、学校をより良い場所にしてください！<br><br><h1>2年後...</h1><br>うわぁ、あなたはロボトン派から追放されました、実は黒幕がいるらしい、タケシ派の陰謀です。ここで、あなたは「2027:生徒会の危機」に行ってください。"
+                    }
+                    if (popwon == false) {
+                        popvotemessage = " To the surprise of many, you became the first Democrat to lose the popular vote while winning the electoral vote! Republicans are seething, trying to cope with the fact that they were so close to victory."
+                    }
+                }
+            }
+            if (campaignTrail_temp.running_mate_last_name == "Clinton" && playerlost == false) {
+                extramessagemargin += " Joe Biden is a bit annoyed you won without him, though."
+            }
+            if (campaignTrail_temp.running_mate_last_name == "Clinton" && playerlost == true) {
+                extramessagemargin += " Many are also angered of your dropping of Joe Biden, which they feel cost you some votes and possibly the election. Biden himself has already yelled at you for losing the election."
+            }
+
+            lostmarginmessage += popvotemessage
+            return "<h3>" + titlemessage + "</h3><p>" + lostmarginmessage + "<p>" + "<p>" + extramessagemargin
+        }
+    }
+
+
+
+    campaignTrail_temp.candidate_image_url = 'https://i.ibb.co/rGD3sFNJ/image.png';
+    campaignTrail_temp.running_mate_image_url = 'https://i.ibb.co/qL9QDxNL/image.png'
+    campaignTrail_temp.candidate_last_name = 'ロボトン';
+    campaignTrail_temp.running_mate_last_name = 'ジョニー';
+    campaignTrail_temp.running_mate_state_id = '32';
+    campaignTrail_temp.player_answers = [];
+    campaignTrail_temp.player_visits = [];
+    campaignTrail_temp.answer_feedback_flg = 1;
+    campaignTrail_temp.game_start_logging_id = '3660976';
+
+</script>

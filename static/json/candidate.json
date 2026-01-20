@@ -23,7 +23,7 @@
   },
     {
     "model": "campaign_trail.candidate",
-    "pk": 20274,
+    "pk": 1373,
     "fields": {
       "first_name": "ロボトン",
       "last_name": "2nd",
@@ -31,11 +31,33 @@
       "party": "ロボトン派",
       "state": "学校",
       "priority": 1,
-      "description": "<p>ロボトンは2027年時点で、現在の生徒会長だ、食事過激派の暴動で対応を取らず批判が今も続いている。</p>",
+      "description": "<p>ロボトンは2027年時点で、現在の生徒会長だ、食事過激派の暴動で対応を取らず批判が今も続いている。<br>生徒会長の仕事のストレスで老いてしまったが、性能はほぼ変更なし、自分のアピールをしまくれば、うまくいくかも。</p>",
       "color_hex": "#0000FF",
       "secondary_color_hex": "#90C0FF",
       "is_active": 1,
-      "image_url": "https://i.ibb.co/tpdBzP1L/rob.png",
+      "image_url": "https://i.ibb.co/rGD3sFNJ/image.png",
+      "electoral_victory_message": "<h3>おめでとうございます！生徒会長選挙で勝ちました！</h3><p>おめでとう！生徒会長の座を維持したよ、予定通りの場合2029年に生徒会長じゃなくなる、その間に、なんか事件があったら途中でやめることになるかもね。</p>",
+      "electoral_loss_message": "<h3>ごめん、あなたは負けた。</h3><p>あなたはタケシ派の団結力とロボトン派の混乱によって敗北、ロボトンおじいちゃんは負けたと聞きガッカリ、これからは卒業まで普通に待つ、退屈な生活になるだろう。</p><h3>2年後。。。大事件が。。。</h3><p>タケシ率いるタケシ軍と食事過激派の戦いが激化し、学校は大混乱に陥った、混乱の後、すぐに生徒会長選挙がされることになった、この混乱の後、ロボトンは再び生徒会長選挙に立候補すると決意、2度目の挑戦、勝てるのか！？</p>",
+      "no_electoral_majority_message": "<h3>Sorry! You have lost in a squeaker.</h3><p>No candidate achieved a majority of the electoral votes, marking the first time this has happened since 1824. Unfortunately for you, the majority of U.S. states have Republican controlled congressional delegations, and they will cast their votes for Mitt Romney.</p><p>Given the incredibly close nature of the election, you can probably set your sights on a political comeback in 2016, if that is what you desire.</p>",
+      "description_as_running_mate": null,
+      "candidate_score": 1.0
+    }
+  },
+{
+    "model": "campaign_trail.candidate",
+    "pk": 1389,
+    "fields": {
+      "first_name": "タケシ派大会議",
+      "last_name": "e2",
+      "election": 2,
+      "party": "タケシ派",
+      "state": "学校",
+      "priority": 1,
+      "description": "<p>タケシ派は、まだ候補者が決まっていない、誰になるかもわからない、会議で決めるという、異例のことが。</p>",
+      "color_hex": "#FF0000",
+      "secondary_color_hex": "#FFA0A0",
+      "is_active": 1,
+      "image_url": "https://i.ibb.co/rGD3sFNJ/image.png",
       "electoral_victory_message": "<h3>おめでとうございます！生徒会長選挙で勝ちました！</h3><p>おめでとう！生徒会長の座を維持したよ、予定通りの場合2029年に生徒会長じゃなくなる、その間に、なんか事件があったら途中でやめることになるかもね。</p>",
       "electoral_loss_message": "<h3>ごめん、あなたは負けた。</h3><p>あなたはタケシ派の団結力とロボトン派の混乱によって敗北、ロボトンおじいちゃんは負けたと聞きガッカリ、これからは卒業まで普通に待つ、退屈な生活になるだろう。</p><h3>2年後。。。大事件が。。。</h3><p>タケシ率いるタケシ軍と食事過激派の戦いが激化し、学校は大混乱に陥った、混乱の後、すぐに生徒会長選挙がされることになった、この混乱の後、ロボトンは再び生徒会長選挙に立候補すると決意、2度目の挑戦、勝てるのか！？</p>",
       "no_electoral_majority_message": "<h3>Sorry! You have lost in a squeaker.</h3><p>No candidate achieved a majority of the electoral votes, marking the first time this has happened since 1824. Unfortunately for you, the majority of U.S. states have Republican controlled congressional delegations, and they will cast their votes for Mitt Romney.</p><p>Given the incredibly close nature of the election, you can probably set your sights on a political comeback in 2016, if that is what you desire.</p>",
@@ -194,6 +216,28 @@
       "electoral_loss_message": "n/a",
       "no_electoral_majority_message": "n/a",
       "description_as_running_mate": "<p>生徒会ロボトン派は生徒会の中の派閥で中くらいの影響力を持っており、それなりに強い組織</p>",
+      "candidate_score": 0.0
+    }
+  },
+  {
+    "model": "campaign_trail.candidate",
+    "pk": 20271,
+    "fields": {
+      "first_name": "ジョニー",
+      "last_name": "a",
+      "election": 2,
+      "party": "ロボトン派",
+      "state": "学校",
+      "priority": 7,
+      "description": "<p>V.P. </p>",
+      "color_hex": "#FF0000",
+      "secondary_color_hex": "#FF0A00",
+      "is_active": 0,
+      "image_url": "https://i.ibb.co/qL9QDxNL/image.png",
+      "electoral_victory_message": "n/a",
+      "electoral_loss_message": "n/a",
+      "no_electoral_majority_message": "n/a",
+      "description_as_running_mate": "<p>ジョニーは、2025年のロボトン派の会議で生徒副会長になり、2025年の生徒会長選挙ではロボトンを支援した、もともと体育館の管理者をしていた、ロボトンの後継者と言われており、ロボトン引退後はジョニーが生徒会長になると言っている。</p>",
       "candidate_score": 0.0
     }
   },

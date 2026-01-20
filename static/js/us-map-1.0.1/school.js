@@ -115,12 +115,12 @@
             var t = this.options.stateStyles;
             var n = this.paper;
             var r = {
-                メインホール: "M 206.3622,272.12598H 596.40944V 920.69293H 206.3622Z",
-                玄関: "M 342.4252,909.35431H 478.48819V 1000.063H 342.4252Z",
-                体育館: "M 217.70079,95.244095H 582.80315V 292.53543H 217.70079Z",
-                トイレ: "M 585.07086,317.48032H 766.48819V 498.89764H 585.07086Z",
-                職員室: "M 54.425198,315.21259H 222.23622V 628.15747H 54.425198Z",
-                教室: "M 22.677166,632.69293H 235.84253V 913.88977H 22.677166Z"
+                1: "M 206.3622,272.12598H 596.40944V 920.69293H 206.3622Z",
+                2: "M 342.4252,909.35431H 478.48819V 1000.063H 342.4252Z",
+                3: "M 217.70079,95.244095H 582.80315V 292.53543H 217.70079Z",
+                4: "M 585.07086,317.48032H 766.48819V 498.89764H 585.07086Z",
+                5: "M 54.425198,315.21259H 222.23622V 628.15747H 54.425198Z",
+                6: "M 22.677166,632.69293H 235.84253V 913.88977H 22.677166Z"
             };
             var i = {};
             var t = {};
@@ -130,24 +130,28 @@
             const stateShapes = new Array(Object.keys(r).length);
             const stateHitAreas = new Array(Object.keys(r).length);
 
-            for (const s of Object.keys(r)) {
-                const pathdat = r[s]
-                if (!this.options.stateSpecificStyles[s]) {
-                    continue;
-                }
+for (const s of Object.keys(r)) {
+    const pathdat = r[s];
 
-                e.extend(i, t, this.options.stateSpecificStyles[s]);
+    if (!this.options.stateSpecificStyles[s]) {
+        e.extend(i, t, this.options.stateStyles);
+    } else {
+        e.extend(i, t, this.options.stateSpecificStyles[s]);
+    }
 
-                stateShapes[s] = n.path(pathdat).attr(i);
-                this.topShape = stateShapes[s];
-                stateHitAreas[s] = n.path(pathdat).attr({
-                    fill: "#000",
-                    "stroke-width": 0,
-                    opacity: 0,
-                    cursor: "pointer",
-                });
-                stateHitAreas[s].node.dataState = s;
-            }
+    stateShapes[s] = n.path(pathdat).attr(i);
+    this.topShape = stateShapes[s];
+
+    stateHitAreas[s] = n.path(pathdat).attr({
+        fill: "#000",
+        "stroke-width": 0,
+        opacity: 0,
+        cursor: "pointer",
+    });
+
+    stateHitAreas[s].node.dataState = s;
+}
+
 
             this.stateShapes = stateShapes;
             this.stateHitAreas = stateHitAreas;
@@ -183,6 +187,59 @@
                 labelBacking: r,
                 labelText: i,
                 labelHitArea: s
+            }
+        },
+                _initCreateLabels: function() {
+            var t = this.paper;
+            var n = [];
+            var r = 1000;
+            var i = 230;
+            var s = this.options.labelWidth;
+            var o = this.options.labelHeight;
+            var u = this.options.labelGap;
+            var a = this.options.labelRadius;
+            var f = s / this.scale;
+            var l = o / this.scale;
+            var c = (s + u) / this.scale;
+            var h = (o + u) / this.scale * .5;
+            var p = a / this.scale;
+            var d = this.options.labelBackingStyles;
+            var v = this.options.labelTextStyles;
+            var m = {};
+            for (var g = 0, y, b, w; g < n.length; ++g) {
+                w = n[g];
+                y = (g + 1) % 2 * c + r;
+                b = g * h + i;
+                m = {};
+                if (this.options.stateSpecificLabelBackingStyles[w]) {
+                    e.extend(m, d, this.options.stateSpecificLabelBackingStyles[w])
+                } else {
+                    m = d
+                }
+                this.labelShapes[w] = t.rect(y, b, f, l, p).attr(m);
+                m = {};
+                if (this.options.stateSpecificLabelTextStyles[w]) {
+                    e.extend(m, v, this.options.stateSpecificLabelTextStyles[w])
+                } else {
+                    e.extend(m, v)
+                }
+                if (m["font-size"]) {
+                    m["font-size"] = parseInt(m["font-size"]) / this.scale + "px"
+                }
+                this.labelTexts[w] = t.text(y + f / 2, b + l / 2, w).attr(m);
+                this.labelHitAreas[w] = t.rect(y, b, f, l, p).attr({
+                    fill: "#000",
+                    "stroke-width": 0,
+                    opacity: 0,
+                    cursor: "pointer"
+                });
+                this.labelHitAreas[w].node.dataState = w
+            }
+            for (var w in this.labelHitAreas) {
+                this.labelHitAreas[w].toFront();
+                e(this.labelHitAreas[w].node).bind("mouseout", this._onMouseOutProxy);
+                e(this.labelHitAreas[w].node).bind("click", this._onClickProxy);
+                e(this.labelHitAreas[w].node).bind("mouseover", this._onMouseOverProxy)
             }
         },
         _onMouseOut: function(e) {

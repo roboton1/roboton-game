@@ -131,7 +131,7 @@ changeFavicon("/roboton-game/static/34starcircle-2.png")
 function loadEntries() {
     $.ajax({
         type: "GET",
-        url: "/roboton-game/static/mods/MODLOADERFILE.html",
+        url: "../static/mods/MODLOADERFILE.html",
         dataType: "text",
         success: function(response) {
             $("#mod_sel_wrapper").html(response);
