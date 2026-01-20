@@ -70,7 +70,7 @@
     "pk": 18,
     "fields": {
       "first_name": "ジョージ・ハーヴァート・田中",
-      "last_name": "George Herbert Tanaka",
+      "last_name": "Tanaka",
       "election": 1,
       "party": "掃除連盟",
       "state": "学校のトイレ",
@@ -289,8 +289,8 @@
     "model": "campaign_trail.candidate",
     "pk": 38,
     "fields": {
-      "first_name": "James P.",
-      "last_name": "Gray",
+      "first_name": "トイレ",
+      "last_name": "a",
       "election": 3,
       "party": "Libertarian",
       "state": "California",
@@ -299,11 +299,11 @@
       "color_hex": "#FFFF00",
       "secondary_color_hex": "#FFFFC0",
       "is_active": 0,
-      "image_url": null,
+      "image_url": "data:image/jpeg;base64,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",
       "electoral_victory_message": "n/a",
       "electoral_loss_message": "n/a",
       "no_electoral_majority_message": "n/a",
-      "description_as_running_mate": null,
+      "description_as_running_mate": "<p>山田君の住処、トイレです。</p>",
       "candidate_score": 0.0
     }
   },
