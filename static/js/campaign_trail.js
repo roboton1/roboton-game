@@ -1648,13 +1648,24 @@ function divideElectoralVotesProp(e, t) {
                 if (real) {
                     return yearbit + "_" + lastnamebit + "_" + veeplastname + ".html"
                 }
-            let yearbit =
-            window.yearbit ??
-            window.selectedYear ??
-            window.electionYear ??
-            campaignTrail_temp?.election_json?.[0]?.fields?.year;
+                function getScenarioYear() {
+                    return (
+                        window.yearbit ??
+                        window.selectedYear ??
+                        window.electionYear ??
+                        campaignTrail_temp?.election_json?.[0]?.fields?.year ??
+                        null
+                    );
+                    }
 
-            console.log("FIXED yearbit:", yearbit);
+                    const yearbit = getScenarioYear();
+                    console.log("SCENARIO YEAR:", yearbit);
+
+                    if (!yearbit) {
+                    throw new Error("Scenario year could not be resolved.");
+                    }
+
+                    return baseScenarioDict[String(yearbit)];
             } else {
                 return campaignTrail_temp.election_json[findFromPK(campaignTrail_temp.election_json, id)].fields.year + "_" + campaignTrail_temp.candidate_json[findFromPK(campaignTrail_temp.candidate_json, cand)].fields.last_name + "_" + campaignTrail_temp.candidate_json[findFromPK(campaignTrail_temp.candidate_json, running_mate)].fields.last_name + ".html"
             }
