@@ -6207,6 +6207,26 @@
         if (ans == 1323) {
             campaignTrail_temp.question_number = 24
         }
+        if (ans == 1278) {
+            radical += 3
+            strat = '票妨害とデマで相手を潰す'
+        }
+        if (ans == 1283) {
+            radical += 9
+            strat = '生徒会長選挙に勝利して、学校を破壊する'
+        }
+        if (ans == 1293) {
+            radical += 6
+        }
+        if (ans == 1297) {
+            radical += 5
+        }
+        if (ans == 1304) {
+            radical = 0
+        }
+        if (ans == 1301) {
+            radical -= 4
+        }
     }
 
     var radical = 0;
@@ -6333,7 +6353,7 @@
 
         // Create Bulk of the Text
         // Duplicate this section to add more lines of text. Make sure to change the variable name "a" to something else. In this case, I changed it to "b".
-        let a = documen
+        let a = document
         t.createElement('p');
         a.innerHTML = 'あなたの目標は<u><b>' + strat + '</b></u>'; // This is the text that will be displayed. You can change this to whatever you want. ' + function + ' will display the number from the function.
         // a.style.flexGrow = '0.1';  // Make h3 take up the maximum space available
@@ -6386,8 +6406,8 @@
 
     campaignTrail_temp.candidate_image_url = 'https://i.ibb.co/N6wWcVWr/image.png';
     campaignTrail_temp.running_mate_image_url = 'data:image/jpeg;base64,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';
-    campaignTrail_temp.candidate_last_name = '田中を';
-    campaignTrail_temp.running_mate_last_name = '生徒会長に';
+    campaignTrail_temp.candidate_last_name = '田中';
+    campaignTrail_temp.running_mate_last_name = '勝て';
     campaignTrail_temp.running_mate_state_id = '32';
     campaignTrail_temp.player_answers = [];
     campaignTrail_temp.player_visits = [];

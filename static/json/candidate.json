@@ -81,7 +81,7 @@
       "is_active": 1,
       "image_url": "https://i.ibb.co/N6wWcVWr/image.png",
       "electoral_victory_message": "<h3>It's a miracle! You have won the 2012 election.</h3> <p>Gary Johnson? Even the people who voted for you can't believe you won.</p> <p>You are the first third-party candidate to ever win the Presidency. Now go enact that Libertarian agenda!</p>",
-      "electoral_loss_message": "<h3>Sorry! You have lost the 2012 election.</h3> <p>But what did you expect? Your main goal was to get the Libertarian agenda out there and hope for a miracle.  The miracle never came.</p>",
+      "electoral_loss_message": "<h3>生徒会長選挙で敗北</h3> <p>あなたは負けた、でも逆に、勝てるのか？あなたは奇跡レベルで勝てないんだ、なぁ？</p>",
       "no_electoral_majority_message": "<h3>Sorry! You have lost the 2012 election.</h3> <p>No candidate achieved a majority of the electoral votes, marking the first time this has happened since 1824. However, this  was entirely irrelevant to your chances as a third-party candidate.</p> <p>Better luck next time.</p>",
       "description_as_running_mate": "<p>After his own failed run for the Republican nomination, Gary Johnson has the inside track on the Libertarian nomination. He also has proven experience as New Mexico's Governor.</p><p>By selecting Johnson, Ron Paul could avoid the splintering of his support to the Libertarian Party. He could also make an appeal to the socially liberal segment of the small government movement, insofar as Johnson is known to be pro-choice and independent of the religious right.</p>",
       "candidate_score": 1.0
