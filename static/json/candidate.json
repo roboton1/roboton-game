@@ -1389,8 +1389,8 @@
     "model": "campaign_trail.candidate",
     "pk": 80,
     "fields": {
-      "first_name": "他候補",
-      "last_name": "他候補",
+      "first_name": "しげるチャンの次男",
+      "last_name": "しげるチャンの次男",
       "election": 2,
       "party": "Reform",
       "state": "Virginia",
@@ -1499,11 +1499,11 @@
     "model": "campaign_trail.candidate",
     "pk": 85,
     "fields": {
-      "first_name": "Joe",
-      "last_name": "Lieberman",
-      "election": 9,
-      "party": "Democrat",
-      "state": "Connecticut",
+      "first_name": "たけお",
+      "last_name": "i",
+      "election": 2,
+      "party": "タケシ派",
+      "state": "ミシガン州",
       "priority": 9,
       "description": "''",
       "color_hex": "#0000FF",
@@ -1513,7 +1513,7 @@
       "electoral_victory_message": "''",
       "electoral_loss_message": "''",
       "no_electoral_majority_message": "''",
-      "description_as_running_mate": "<p>Joe Lieberman is a moderate Democrat and Orthodox Jew who has served as a Senator from Connecticut. He would be the first Jewish candidate or running mate from a major party. He was also a prominent critic of Bill Clinton's missteps during his time in the White House. Geographically, Lieberman could help with Gore's vote total in the critical state of Florida.</p>",
+      "description_as_running_mate": "<p>たけおは、タケシの親族で、副リーダー、タケシ派のベテランで3歳の時から加盟している。</p>",
       "candidate_score": 0.0
     }
   },

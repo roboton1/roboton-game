@@ -481,14 +481,6 @@
   },
   {
     "model": "campaign_trail.running_mate",
-    "pk": 53,
-    "fields": {
-      "candidate": 78,
-      "running_mate": 86
-    }
-  },
-  {
-    "model": "campaign_trail.running_mate",
     "pk": 69,
     "fields": {
       "candidate": 105,
@@ -573,22 +565,6 @@
     "fields": {
       "candidate": 200,
       "running_mate": 205
-    }
-  },
-  {
-    "model": "campaign_trail.running_mate",
-    "pk": 54,
-    "fields": {
-      "candidate": 78,
-      "running_mate": 87
-    }
-  },
-  {
-    "model": "campaign_trail.running_mate",
-    "pk": 55,
-    "fields": {
-      "candidate": 78,
-      "running_mate": 88
     }
   },
   {
